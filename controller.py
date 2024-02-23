@@ -49,13 +49,13 @@ def update(id):
         return f"Employee ID:{id} Does not exist in database."
 
 
-
+def delete(id):
+    emp = Employee.objects.get(id = id)
+    emp.delete()
+    return render_template("allemp.html")
 
 
 
 if __name__ == "__main__":
     app.run(host = "localhost",port = 5000,debug = True)
-
-
-
 
