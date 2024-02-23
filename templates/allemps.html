@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <h2>Add Employee </h2>
+        <form action = "" method = "post">
+            <p> name <input type = "text" name = "name"/></p>
+            <p>age <input type = "integer"name = "age"/></p>
+            <p>position <input type = "text" name = "position"/></p>
+            <p><input type = "submit" value = "Add Employee"/></p>
+            </form>
+
+
+         <hr>
+         <h2>All Employees</h2>    <br>
+
+
+         <table border = 1>
+            <th>ID</th>
+            <th>Name</th>
+            <th>age</th>
+            <th>position</th>
+            { % for emp in employees % }
+            <tr>
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.position}}</td>
+            </tr>
+            { % endfor % }
+         </table>
+
+    </body>
+</html>
